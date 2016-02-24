@@ -389,9 +389,11 @@ By default, this is the same except for the \"pick\" command."
 
 ;;;###autoload
 (defconst git-rebase-filename-regexp "/git-rebase-todo\\'")
+
 ;;;###autoload
+;; note that git-irb-mode, not git-rebase is registered!
 (add-to-list 'auto-mode-alist
-             (cons git-rebase-filename-regexp 'git-rebase-mode))
+             (cons git-rebase-filename-regexp 'git-irb-mode))
 
 (add-to-list 'with-editor-server-window-alist
              (cons git-rebase-filename-regexp 'switch-to-buffer))
